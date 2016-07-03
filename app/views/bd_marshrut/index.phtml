@@ -1,0 +1,84 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="page-header">
+    <h1>
+        Search bd_marshrut
+    </h1>
+    <p>
+        <?php echo $this->tag->linkTo(array("bd_marshrut/new", "Create bd_marshrut")) ?>
+    </p>
+</div>
+
+<?php echo $this->getContent() ?>
+
+<?php
+    echo $this->tag->form(
+        array(
+            "bd_marshrut/search",
+            "autocomplete" => "off",
+            "class" => "form-horizontal"
+        )
+    );
+?>
+
+<div class="form-group">
+    <label for="fieldIdMarshruta" class="col-sm-2 control-label">Id Of Marshruta</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("id_marshruta", "type" => "number", "class" => "form-control", "id" => "fieldIdMarshruta")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldUsername" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("username", "size" => 30, "class" => "form-control", "id" => "fieldUsername")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldName" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("name", "size" => 30, "class" => "form-control", "id" => "fieldName")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldA" class="col-sm-2 control-label">A</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("A", "size" => 30, "class" => "form-control", "id" => "fieldA")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldB" class="col-sm-2 control-label">B</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("B", "size" => 30, "class" => "form-control", "id" => "fieldB")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldText" class="col-sm-2 control-label">Text</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("text", "size" => 30, "class" => "form-control", "id" => "fieldText")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldId" class="col-sm-2 control-label">Id</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("id", "type" => "number", "class" => "form-control", "id" => "fieldId")) ?>
+    </div>
+</div>
+
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <?php echo $this->tag->submitButton(array("Search", "class" => "btn btn-default")) ?>
+    </div>
+</div>
+
+<?php echo $this->tag->endForm(); ?>

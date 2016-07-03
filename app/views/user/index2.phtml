@@ -1,0 +1,75 @@
+
+ 
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.js"></script>
+
+ 
+<script type="text/javascript">
+    
+
+
+
+                    var ajaxHash = {
+                        'BeginTime': BeginTimeTs,
+                        'EndTime': EndTimeTs,
+                        'list': list_ko_ob.val(),
+                        // 'list': list_ob.val(),
+                        'list_statgroup': list_statgroup_ob.val(),
+                        'list_carmodel': list_carmodel_ob.val(),
+
+                        'op': op_ob.val(),
+                        // 'list_cartype': list_cartype_ob()
+
+};
+
+alert('hfdhdzs');
+</script>
+ 
+<?php
+
+echo "gsgsgs";
+?>
+
+
+<?php
+
+ ob_start();
+echo "                <table style=max-width: 100%;>
+                    <thead>
+                        <tr>
+
+                            <th>ТС</th>
+                            <th>Тип ТС</th>
+                            <th>Пробег</th>
+                            <th>Время движения</th>
+                            <th>Ср. скорость</th>
+                            <th>Макс. скорость</th>
+                            <th>Время простоя</th>
+                            <th>Наличие проблем</th>
+                            <th>Водитель</th>
+                        </tr>
+                    </thead>
+                                             <tbody>
+                                             <tr> <td> </td> </tr>
+                    </tbody>
+
+ 
+                </table>
+";
+ $out = ob_get_clean();
+ echo  $out;
+
+
+
+
+
+echo "fsgsrgrs";
+?>   
+
+<?php
+ 
+  $this->session->set("user-name", $out);
+   
+ 
+?>
